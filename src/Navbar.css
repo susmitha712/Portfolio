@@ -1,0 +1,112 @@
+ 
+.navbar {
+  background: #0d1117;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-logo span {
+  color: #64ffda;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+ 
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* .nav-links a:hover,
+.nav-links a.active {
+  color: #64ffda;
+} */
+
+.resume-btn {
+  background: transparent;
+  border: 1px solid #64ffda;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #64ffda;
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #64ffda;
+  color: #0d1117;
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0d1117;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

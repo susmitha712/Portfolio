@@ -1,0 +1,108 @@
+ /* .welcome-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
+  padding: 50px;
+  color: white;
+  z-index: 1;
+}
+
+.left {
+  flex: 1;
+  margin-left: 20%;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  width: 350px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(114, 114, 114);
+}
+
+.vertical-typing {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  height: auto;
+}
+
+.vertical-typing span {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropIn 0.3s forwards;
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.cursor {
+  margin-top: 4px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+} 
+ */
+.text-outline {
+  font-size: 3rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-outline::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  color: white;
+  -webkit-text-stroke: 0px;
+  overflow: hidden;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  animation: outlineFill 4s linear forwards;
+}
+
+@keyframes outlineFill {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.waterwave {
+  font-size: 2rem;
+  font-weight: bold;
+  background: url("https://i.ibb.co/8mP7ZP4/wave-texture.png");
+  background-size: cover;
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waveMove 3s infinite linear;
+}
+
+@keyframes waveMove {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 200px; }
+}

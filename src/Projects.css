@@ -1,0 +1,192 @@
+/* Projects.css - 3D cards grid */
+:root{
+  /* --bg: #0b1020; */
+  --card: #152743;
+  --muted: #9aa4b2;
+  --accent: #00d4ff;
+  --glass: rgba(255,255,255,0.04);
+}
+
+.projects-section{
+  padding: 60px 20px;
+  background: var(--bg);
+  color: #fff;
+  min-height: 60vh;
+}
+
+.projects-title{
+  text-align: center;
+  margin-bottom: 34px;
+  font-size: 28px;
+  letter-spacing: 0.4px;
+}
+
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.project-card{
+  perspective: 1200px;
+  outline: none;
+}
+.project-card.small { grid-column: span 4; min-height: 240px; }
+.project-card.medium { grid-column: span 5; min-height: 300px; }
+.project-card.large { grid-column: span 15; min-height: 420px; }
+
+/* responsive adjustments */
+@media (max-width: 900px){
+  .project-card.small, .project-card.medium, .project-card.large { grid-column: span 12; }
+}
+
+/* scene and surface create the 3D effect */
+.card-scene{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items:stretch;
+  justify-content:center;
+}
+
+.card-surface{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(18, 11, 34), rgb(22, 20, 53));
+  border-radius: 14px;
+  box-shadow:
+    0 6px 18px rgba(2,6,23,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.02);
+  transform-style: preserve-3d;
+  transition: transform 400ms cubic-bezier(.2,.9,.3,1), box-shadow 300ms;
+  display:flex;
+  flex-direction:column;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* tilt on hover & focus */
+.project-card:focus .card-surface,
+.project-card:hover .card-surface{
+  transform: translateY(-10px) rotateX(6deg) rotateY(-6deg) scale(1.02);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.6),
+    0 6px 40px rgba(0,212,255,0.06);
+}
+
+/* image area: top */
+.card-image{
+  height: 58%;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: transform 350ms;
+  will-change: transform;
+}
+
+/* body */
+.card-body{
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.06));
+}
+
+.card-title{
+  font-size: 18px;
+  margin: 0;
+  color: #eaf6ff;
+}
+
+.card-desc{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* footer with icons */
+.card-footer{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(255,255,255,0.02);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+}
+
+/* github icon button */
+.icon-btn{
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--glass);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform .2s, background .2s;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.icon-btn:hover,
+.icon-btn:focus {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,0,0,0.06));
+  box-shadow: 0 8px 24px rgba(0,212,255,0.06);
+}
+
+.view-btn{
+  margin-left: auto;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0,212,255,0.12), rgba(0,120,255,0.08));
+  color: var(--accent);
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(0,212,255,0.08);
+  transition: transform .2s, box-shadow .2s;
+}
+.view-btn:hover,
+.view-btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,212,255,0.06);
+}
+.play-icon{ font-size: 18px; }
+
+/* small decorative shine on top-right */
+.card-surface::after{
+  content: "";
+  position: absolute;
+  right: -40%;
+  top: -40%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(closest-side, rgba(255,255,255,0.03), transparent 40%);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+/* keyboard focus outline */
+.project-card:focus {
+  outline: 2px solid rgba(0,212,255,0.12);
+  outline-offset: 6px;
+}
+
+/* utility */
+@media (max-width: 900px){
+  .projects-grid{ gap: 18px; }
+  .card-title{ font-size: 16px; }
+}

@@ -1,0 +1,120 @@
+.education-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #484848; /* gray background */
+  z-index: 1;
+}
+
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  background-color:  #3aa6ff; /* blue overlay */
+  z-index: 2;
+  height: 0%; /* start empty */
+  transition: height 0.2s ease-out;
+
+}
+
+
+.timeline-dot {
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 0, 0);
+  border: 3px solid #3aa6ff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.timeline-card {
+  position: relative;
+  width: 35%;
+  margin: 50px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-card.left {
+  left: 0;
+  margin-left: 9%;
+
+}
+.timeline-card.left .timeline-dot{
+    margin-left: 117%;
+}
+.timeline-card.right {
+  left: 55%;
+}
+.timeline-card.right .timeline-dot{
+    margin-right: 174.5%;
+}
+
+.timeline-content {
+  background: rgba(0, 0, 0, 0.708);
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 4px 10px rgb(170, 237, 255);
+  box-sizing: border-box;
+  color:rgb(255, 255, 255);
+  
+}
+
+/* Arrow for left cards */
+.timeline-card.left .timeline-content::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -45px;
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgb(0, 0, 0);
+  /* box-shadow: 0 4px 10px rgb(170, 237, 255); */
+}
+
+/* Arrow for right cards */
+.timeline-card.right .timeline-content::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -45px;
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent rgb(0, 0, 0) transparent transparent;
+  
+}
+
+.timeline-year {
+  display: block;
+  font-weight: bold;
+  color: #007bff;
+}
+.edu h1{
+  color:#2890ff;
+  /* margin-left: 30%; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
