@@ -19,6 +19,7 @@
   margin-bottom: 34px;
   font-size: 28px;
   letter-spacing: 0.4px;
+  color:rgb(0, 131, 196);
 }
 
 
@@ -82,12 +83,15 @@
 
 /* image area: top */
 .card-image{
-  height: 58%;
-  background-size: cover;
+  height: 98%;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   border-bottom: 1px solid rgba(255,255,255,0.03);
   transition: transform 350ms;
   will-change: transform;
+  margin-top: 4%;
+
 }
 
 /* body */

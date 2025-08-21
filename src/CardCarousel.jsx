@@ -48,10 +48,10 @@ const skills = [
 
 const CardCarousel = () => {
   return (
-    <div className="carousel-wrapper" id="skills">
+    <div className="carousel-wrapper" id="skill">
 
 
-      <div className="carousel-container">
+      <div className="carousel-container" >
         <Swiper
           modules={[Navigation, Pagination, EffectCards, Autoplay]}
           effect="cards"

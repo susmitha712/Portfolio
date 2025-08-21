@@ -58,19 +58,37 @@
 } */
 
 .resume-btn {
-  background: transparent;
-  border: 1px solid #64ffda;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  color: #64ffda;
-  transition: 0.3s ease;
+  
+  background-color: #000000;
+  color: white;
+  padding: 10px 25px;
+  border: 3px solid rgb(0, 255, 242);  
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-style: double;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.resume-btn:hover {
-  background-color: #64ffda;
-  color: #0d1117;
+.resume-btn::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5cffef;
+  z-index: -1;
+  transition: left 0.3s ease;
 }
-
+ .resume:hover{
+   background-color: #4dfcff;
+   color: #fff;
+ }
 /* Hamburger Menu for Mobile */
 .menu-toggle {
   display: none;

@@ -35,7 +35,7 @@ const SkillIcons = () => {
     <div className="skills-section" id="learnings">
       <h1>Learnings</h1>
       {Object.entries(categories).map(([category, skills]) => (
-        <div key={category} className="category-container">
+        <div key={category} className="category-container" >
           <h2 className="category-title">{category}</h2>
           <div className="skills-marquee">
             <div className="marquee-content">

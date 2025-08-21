@@ -9,9 +9,9 @@ const projects = [
     id: 5,
     title: "Student Event Registration System",
     description: "Built a Student Event Management System to streamline event creation, registration, and management for college student chapters, enabling organizers to post event details and students to register seamlessly through an interactive web interface.",
-    image: "./assets/calculator.jpg",
+    image: "./assets/event1.png",
     github: "https://github.com/susmitha712/StudentEventRegistrationSystem",
-    video: "./assets/stu.mp4",
+    video: "./assets/students.mp4",
     size: "large",
   },
   {
@@ -55,8 +55,8 @@ const projects = [
     title: "portfolio",
     description: "Designed and developed a personal portfolio website to showcase my skills, projects, and achievements, featuring an interactive UI, responsive design, and smooth animations for an engaging user experience.",
     image: "./assets/calculator.jpg",
-    github: "https://github.com/susmitha712/calculator",
-    video: "./assets/CALC.mp4",
+    github: "https://github.com/susmitha712/PRODIGY-WD-04",
+    video: "./assets/pfolio.mp4",
     size: "medium",
   },
   

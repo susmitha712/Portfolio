@@ -26,10 +26,11 @@ const Navbar = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 60,
-        behavior: 'smooth',
-      });
+      element.scrollIntoView({
+  behavior: 'smooth',
+  block: 'start'
+});
+
       setMenuOpen(false);
     }
   };
@@ -41,7 +42,7 @@ const Navbar = () => {
       </div>
 
       <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        {['home', 'skills','learnings','projects', 'Education', 'certificates'].map((id) => (
+        {['home', 'skill','learnings','Education','projects',  'certificates'].map((id) => (
           <a
             key={id}
             href={`#${id}`}
@@ -54,7 +55,7 @@ const Navbar = () => {
             {id.charAt(0).toUpperCase() + id.slice(1)}
           </a>
         ))}
-        <a href="/assets/resume.pdf" download className="resume-btn">
+        <a href="/assets/hireme1.pdf"  className="hire-button">
           Resume
         </a>
       </div>
