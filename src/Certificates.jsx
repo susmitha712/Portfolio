@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Certificates.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+// import { Navigation } from "swiper/modules";
+import { Navigation} from 'swiper';
+
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
