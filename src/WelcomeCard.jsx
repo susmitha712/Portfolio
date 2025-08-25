@@ -34,7 +34,7 @@ export default function WelcomeText() {
   }, [charIndex, deleting, roleIndex, roles]);
 
   return (
-    <div className="welcome-text" id="#">
+    <div className="welcome-text" >
   <div className="left-text">
     <div className="text-outline" data-text="THIS IS">THIS IS</div>
     <div className="text-outline" data-text="SUSMITHA">SUSMITHA</div>

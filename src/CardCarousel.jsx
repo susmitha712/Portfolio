@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Pagination, EffectCards, Autoplay } from "swiper/modules";
 import { Navigation, Pagination, EffectCards ,Autoplay} from 'swiper';
+import TypewriterParagraph from "./TypewriterParagraph";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -83,7 +84,7 @@ const CardCarousel = () => {
 
         <div className="text-section">
         <h2>My Skills & Interests</h2>
-        <p id="typing-paragraph">
+        {/* <p id="typewriter">
           I’m a versatile developer with a passion 
           for blending creativity and technology. 
           Skilled in both Web and Full Stack Development, 
@@ -95,7 +96,11 @@ const CardCarousel = () => {
           Drawing, and Painting, which fuel my visual storytelling 
           and artistic expression. Together, these skills reflect my 
           drive to create innovative and meaningful digital experiences.
-        </p>
+        </p> */}
+        <TypewriterParagraph
+        text={`I’m a versatile developer with a passion for blending creativity and technology. Skilled in both Web and Full Stack Development, I build responsive, user-friendly applications. My background in Competitive Programming sharpens my problem-solving abilities, while my Prompting and Reasoning Skills enhance creativity and logical thinking. Beyond coding, I enjoy Photography, Editing, Drawing, and Painting, which fuel my visual storytelling and artistic expression. Together, these skills reflect my drive to create innovative and meaningful digital experiences.`}
+
+      />
         <a href="https://www.linkedin.com/in/susmitha-pottipogu-b7256428b/" target="_blank" rel="noopener noreferrer">
           <button className="hire-button">Hire Me</button>
         </a>

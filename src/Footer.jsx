@@ -54,7 +54,7 @@ const Footer = () => {
 <div className="footcopy">
   <div>
       <p className="footer-copy" style={{paddingTop:"30px"}}>
-        © {new Date().getFullYear()} Your Name. All Rights Reserved.
+        © {new Date().getFullYear()} susmitha. All Rights Reserved.
       </p>
       </div>
       <div>

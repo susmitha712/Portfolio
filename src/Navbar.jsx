@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="home">
       <div className="navbar-logo" onClick={() => scrollToSection('welcome')}>
         Susmitha<span>.</span>
       </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
             {id.charAt(0).toUpperCase() + id.slice(1)}
           </a>
         ))}
-        <a href="/assets/hireme1.pdf"  className="resume-btn">
+        <a href="/assets/hireme1.pdf"  className="hire-button">
           Resume
         </a>
       </div>

@@ -54,7 +54,7 @@ const projects = [
     id: 6,
     title: "portfolio",
     description: "Designed and developed a personal portfolio website to showcase my skills, projects, and achievements, featuring an interactive UI, responsive design, and smooth animations for an engaging user experience.",
-    image: "./assets/calculator.jpg",
+    image: "./assets/portfolio.png",
     github: "https://github.com/susmitha712/PRODIGY-WD-04",
     video: "./assets/pfolio.mp4",
     size: "medium",

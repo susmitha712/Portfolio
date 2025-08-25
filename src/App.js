@@ -9,26 +9,29 @@ import Certificates from './Certificates';
 import Education from './Education';
 import Projects from './Projects';
 import Footer from './Footer';
+import ParticlesBackground from './ParticlesBackground';
 
 function App() {
   return (
     <div className="app-container">
       <Navbar />
-
+      
       {/* Welcome section (no starfield behind it) */}
-      <WelcomeCard />
+      
 
       {/* Global starfield, stays fixed behind all sections */}
      
 
       {/* Overlayed content on top of starfield */}
       <div className="overlay">
+        <WelcomeCard />
         <CardCarousel />
         <SkillIcons />
         <Education />
         <Projects />
         <Certificates />
         <Footer />
+        <ParticlesBackground />
       </div>
     </div>
   );
