@@ -11,7 +11,7 @@ const projects = [
     description: "Built a Student Event Management System to streamline event creation, registration, and management for college student chapters, enabling organizers to post event details and students to register seamlessly through an interactive web interface.",
     image: "./assets/event1.png",
     github: "https://github.com/susmitha712/StudentEventRegistrationSystem",
-    video: "./assets/students.mp4",
+    video: "/assets/students.mp4",
     size: "large",
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     description: "Developed a responsive stopwatch application with start, pause, lap, and reset functionality, enabling accurate time tracking. Built using HTML, CSS, and JavaScript with an intuitive and interactive user interface.",
     image: "./assets/watch.jpg",
     github: "https://github.com/susmitha712/PRODIGY_WD_02",
-    video: "./assets/stopwatch.mp4",
+    video: "/assets/stopwatch.mp4",
     size: "small",
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     description: "Created a dynamic weather application using HTML and CSS integrating a Weather API to display real-time temperature, conditions, and location-based forecasts. Designed with a clean, responsive interface for an engaging user experience.",
     image: "./assets/weather.jpg",
     github: "https://github.com/susmitha712/PRODIGY-WD-05",
-    video: "./assets/weatherapp.mp4",
+    video: "/assets/weatherapp.mp4",
     size: "small",
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     description: "Developed a fully functional calculator using HTML, CSS, and JavaScript, capable of performing basic arithmetic operations with an intuitive and responsive interface.",
     image: "./assets/calculator.jpg",
     github: "https://github.com/susmitha712/calculator",
-    video: "./assets/CALC.mp4",
+    video: "/assets/CALC.mp4",
     size: "small",
   },
  {
@@ -56,7 +56,7 @@ const projects = [
     description: "Designed and developed a personal portfolio website to showcase my skills, projects, and achievements, featuring an interactive UI, responsive design, and smooth animations for an engaging user experience.",
     image: "./assets/portfolio.png",
     github: "https://github.com/susmitha712/PRODIGY-WD-04",
-    video: "./assets/pfolio.mp4",
+    video: "/assets/pfolio.mp4",
     size: "medium",
   },
   
