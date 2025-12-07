@@ -55,7 +55,7 @@ const Navbar = () => {
             {id.charAt(0).toUpperCase() + id.slice(1)}
           </a>
         ))}
-        <a href="/assets/hireme1.pdf"  className="hire-button">
+        <a href="/assets/resume_linkedin.pdf"  className="hire-button">
           Resume
         </a>
       </div>
